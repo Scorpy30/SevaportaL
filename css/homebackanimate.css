@@ -1,0 +1,18 @@
+.circle {
+  --circle-size: 70px;
+  position: fixed;
+  height: var(--circle-size);
+  width: var(--circle-size);
+  border: 2px solid white;
+  border-radius: 100%;
+  top: calc(var(--circle-size) / 2 * -1);
+  left: calc(var(--circle-size) / 2 * -1);
+  pointer-events: none;
+  z-index: 1000;
+}
+
+#horizontal-line {
+  width: 10000000px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(254, 250, 246, 1) 100%)
+}

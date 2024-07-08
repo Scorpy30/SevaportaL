@@ -1,0 +1,1268 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/transport-background.jpg);
+    background-size: cover;
+    background-position: 100px bottom;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    font-family: 'Josefin Sans', sans-serif;
+    align-items: centre;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+nav a{
+    text-decoration: none;
+}
+.logo{
+    color: white;
+    font-size: 28px;   
+}
+#Portallogo{
+    color: #ea1538;
+}
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: #ea1538;
+    transition: .3s;
+}
+#register-button{
+    border: none;
+    background: #ea1538;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+}
+#register-button:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 20vh; /*Adjust height as needed */
+    padding-left: 60px;
+}
+
+.travel-box-container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    border-radius: 50px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    max-width: 50%; /* Adjust max-width as needed */
+}
+
+.travel-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #414141;
+    background-color: white;
+    margin: .5px; /* Adjust margin between items */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    flex: 1 1 20%; /* Allow items to grow, shrink, and initially be 20% wide */
+    max-width: 20%; /* Adjust max-width to fit 5 items per row */
+    max-height: 70px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+.travel-box:hover {
+    background-color: #ccc; /* Change background color on hover */
+}
+.travel-box.clicked {
+    background-color: #28282B !important;
+    color:#ea1538 ;
+}
+.travel-box.clicked p{
+    color: white;
+}
+.travel-box:first-child {
+    margin-left: 0;
+}
+.travel-box:last-child {
+    margin-right: 0;
+}
+.travel-box p {
+    margin-top: 4px;
+    font-size: 12px;
+    font-family: 'Varela';
+}
+.travel-box i {
+    font-size: 20px;
+    margin-bottom: 4px;
+
+}
+
+
+.more-icon {
+    display: flex;
+    align-items: center; /* Center icon vertically */
+    margin-left: 10px; /* Adjust margin between travel-box-container and more-icon */
+    position: relative;
+    color: white;
+    margin-left: 20px; /* Adjust spacing between travel-box-container and more-icon */
+    transition: .4s;
+}
+.more-icon i {
+    font-size: 25px;
+    cursor: pointer;
+}
+.more-icon:hover{
+    color: #ea1538;
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+
+.dropdown {
+    position: absolute;
+    top: calc(100% + 10px); /* Position below the more-icon */
+    left: 0; /* Center horizontally */
+    background-color: white;
+    width: 128px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    padding: 10px;
+    padding-bottom: 2px;
+    display: none; /* Initially hidden */
+    z-index: 1111;
+}
+.dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.dropdown ul li {
+    margin-bottom: 8px; /* Adjust margin between list items */
+}
+.dropdown ul li a {
+    display: flex; /* Align icon and text in a row */
+    align-items: center; /* Center items vertically */
+    text-decoration: none;
+    color: #414141; /* Text color for both icon and text */
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+.dropdown ul li a i {
+    margin-left: 5px; /* Adjust margin between icon and text */
+    font-size: 12px; /* Adjust icon size */
+}
+.dropdown ul li a span {
+    font-family: 'Varela';
+    margin-left: 15px; /* Adjust margin between icon and text */
+    font-size: 10px; /* Adjust text size */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+.dropdown ul li a:hover {
+    color: #ea1538; /* Change color on hover */
+}
+
+.flights-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white; /* Grey background */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 20px; /* Rounded corners */
+    width: 1200px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    font-family: 'Poppins';
+}
+.flights-top-flex-container {
+    display: flex;
+}
+
+.flights-top-flex-container {
+    display: flex;
+}
+
+
+.flights-search-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px; /* Adjust the gap between grid items */
+}
+
+.flight-wrapper1 {
+    display: flex;
+}
+.flight-wrapper2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flight-items {
+    background-color: white;
+    border: 0.5px #ccc solid;
+    border-radius: 20px;
+    padding: 20px; /* Adjust padding as needed */
+    text-align: centre; /* Align text to the left */
+    align-items: center;
+}
+
+#search-button {
+    background-color: #ea1538;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: auto; /* Push the button to the right */
+    transition: 0.5s;
+}
+#search-button:hover {
+    background-color: #ba112d;
+}
+
+
+#traveller {
+    display: flex;
+    width: 200px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: 500;
+}
+#total-travellers{
+    width:10px;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+    margin-left: 20px;
+    font-weight: 500;
+}
+#traveller i{
+ color: #3264fe;
+}
+#traveller:hover {
+    border-color: #ea1538;
+    transition: 0.5s;
+}
+
+#traveller span {
+    padding-left: 5px;
+    padding-right: 10px;
+}
+#traveller .fa-caret-down {
+    color: #3264fe;
+    font-size: 15px; /* Adjust size as needed */
+    margin-left: auto;
+}
+
+/* This section below is for the pop-up that appears for inputting traveller details */
+
+
+.traveller-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black overlay */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+.traveller-details{
+    font-family: 'Varela';
+    width: 300px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+    z-index: 1010;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styles to make the popup visible when open */
+.traveller-container.active {
+    display: flex;
+}
+
+.traveller-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 6%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
+#adults{
+    padding-bottom: 5%;
+}
+.passenger-no{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 4%;
+}
+input[type="number"]{
+    appearance: textfield;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    background-color: #ffffff;
+    color: #202030;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.traveller-details button{
+    color: #3264fe;
+    background-color: #ffffff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.person-wrap h6{
+    font-weight: lighter;
+}
+
+#decrement{
+    padding: 15px 5px 15px 25px;
+    border-radius: 45px 0 0 45px;
+}
+#increment{
+    padding: 15px 25px 15px 5px;
+    border-radius: 0 45px 45px 0;
+}
+
+.input-stepper button{
+    transition: 0.2s;
+}
+.input-stepper button.disabled {
+    background-color: #fff; /* Light grey background */
+    color: #a0a0a0; /* Grey text */
+    cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+#adults-decrement.disabled {
+    background-color: #fff; /* Light grey background */
+    color: #a0a0a0; /* Grey text */
+    cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+
+#infants-increment.disabled {
+    background-color: #fff; /* Light grey background */
+    color: #a0a0a0; /* Grey text */
+    cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+
+#traveller-alert {
+    font-size: 9px;
+    margin: auto;
+    color: red;
+    font-weight: normal;
+    display: none;
+}
+#traveller-alert.active {
+    display: block;
+}
+
+#traveller-text{
+    font-size: 12px;
+    margin: auto;
+    color: rgb(144, 143, 143);
+    opacity: 50%;
+    font-weight: bold;
+}
+
+
+#apply-button{
+    background-color: #3264fe;
+    font-family: 'Varela';
+    font-size: 15px;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: auto;
+    margin: 5% 5% 5%;
+    transition: 0.2s;
+}
+
+#apply-button:hover{
+    background-color: #143ebd;
+}
+
+
+
+/* End of traveller pop-up */
+
+
+
+#triptype {
+    align-items: center;
+}
+#triptype:hover {
+    border-color: #ea1538;
+    transition: 0.5s;
+}
+
+.radio {
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+.radio + .radio{
+    margin-left: 20px;
+}
+
+.radio input[type="radio"]{
+    display: none;
+}
+.radio span {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2.5px solid #ea1538;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 1px
+}
+
+.radio span:after{
+    content: " ";
+    height: 9px;
+    width: 9px;
+    background: #ea1538;
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    border-radius: 50%;
+    transition: 200ms ease-in-out 0s;
+}
+.radio input[type="radio"]:checked ~ span:after {
+    transform: translate(-50%,-50%) scale(1);
+}
+
+
+
+
+.inputbox {
+    position: relative;
+    display: inline-block; /* Ensure inline-block for positioning */
+    width: 200px;
+}
+
+.flight-items {
+    margin-right: 10px;
+}
+.flight-items:hover {
+    border-color: #ea1538;
+    transform: 0.5s;
+}
+
+.inputbox input {
+    font-family: 'Poppins';
+    width: calc(100% - 10px); /* Adjust for button width + padding */
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    transition: 0.5s;
+}
+
+.inputbox span {
+    position: absolute;
+    left: 5px;
+    padding: 5px;
+    pointer-events: none;
+    font-size: 1em;
+    color: grey;
+    transition: 0.5s;
+}
+
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span {
+    color: black;
+    transform: translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 5px;
+    background: white;
+    border: none;
+    letter-spacing: 0.2em;
+}
+
+.fa-location-dot {
+    color: #ea1538;
+    font-size: 20px;
+}
+
+.result-box {
+    position: fixed; /* Change back to absolute */
+    background: #fff;
+    transform: translate(-12%, 10%); /* Move back by half of its own width and height */
+    width: 250px;
+    z-index: 1; /* Ensure it's above other content */
+    border-radius: 10px;
+}
+
+.result-box ul {
+
+    padding: 15px 10px;
+    max-height: 300px; /* Set maximum height for scrollable content */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.result-box ::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+.result-box ::-webkit-scrollbar-thumb {
+    background-color: rgb(208, 207, 207);
+    border-radius: 50px;
+}
+
+
+.result-box ul li {
+    font-family: 'Varela';
+    list-style: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+.result-box ul li:hover {
+    background: #e9f3ff;
+}
+
+
+
+
+#calender-popup {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #ea1538;
+    border: none;
+    padding: 0;
+    cursor: pointer; 
+    transition: 0.2s;
+}
+#calender-popup:hover {
+    background: rgb(225, 223, 223);
+    border-radius: 50%;
+}
+
+#calender-popup .fa-solid {
+    font-size: 1.2em;
+    padding: 10px;
+    padding-inline: 12px;
+}
+
+#calender-popup-train {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: #ea1538;
+    border: none;
+    padding: 0;
+    cursor: pointer; 
+    transition: 0.2s;
+}
+#calender-popup-train:hover {
+    background: rgb(225, 223, 223);
+    border-radius: 50%;
+}
+
+#calender-popup-train .fa-solid {
+    font-size: 1.2em;
+    padding: 10px;
+    padding-inline: 12px;
+}
+
+
+.wrapper{
+    display: none; /* Hide the calendar initially */
+    position: absolute;
+    z-index: 1000; /* Ensure calendar is above other elements */
+    width: 350px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    font-family: 'Poppins', sans-serif;
+  }
+  .wrapper header{
+    display: flex;
+    align-items: center;
+    padding: 15px 20px 5px;
+    justify-content: space-between;
+  }
+  header .icons{
+    display: flex;
+  }
+  header .icons span{
+    height: 30px;
+    width: 30px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    text-align: center;
+    line-height: 25px;
+    font-size: 1.5rem;
+    user-select: none;
+    border-radius: 50%;
+  }
+  .icons span:last-child{
+    margin-right: -10px;
+  }
+  header .icons span:hover{
+    background: #f2f2f2;
+  }
+  header .current-date{
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  .calendar{
+    padding: 10px;
+  }
+  .calendar ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+  }
+  .calendar .days{
+    margin-bottom: 10px;
+  }
+  .calendar li{
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+  }
+  .calendar .weeks li{
+    font-weight: 500;
+    cursor: default;
+  }
+  .calendar .days li{
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+  }
+  .days li.inactive{
+    color: #aaa;
+  }
+  .days li.active{
+    color: #fff;
+  }
+  .days li::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .days li.active::before{
+    background: #9B59B6;
+  }
+  .days li:not(.active):hover::before{
+    background: #f2f2f2;
+  }
+
+
+/* TRAINS SECTION */
+
+.trains-container{
+    font-family: 'Poppins';
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #fff;
+    max-width: 80%;
+    max-height: 150px;
+}
+
+#wherefromtrain{
+    margin-left: 25px;
+}
+
+
+.class-type{
+    display: flex;
+    flex-direction: column;
+}
+
+.class-type h3{
+    margin-left: 35px;
+    margin-top: 40px;
+}
+
+.class-dropdown {
+    min-width: 15em;
+    position: relative;
+    margin: 1em;
+    margin-top: 10px;
+    margin-bottom: 80px;
+    margin-left: auto;
+}
+.class-dropdown * {
+    box-sizing: border-box;
+}
+
+.select {
+    color: #fff;
+    background: #2a2f3b ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px #2a2f3b solid;
+    border-radius: 0.5em;
+    padding: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.select-clicked {
+    border: 2px #26489a solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+
+.select:hover {
+    background: #323741;
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+
+.caret-rotate {
+    transform: rotate(180 deg);
+}
+
+.menu-container {
+    position: absolute; /* Change back to absolute */
+    top: 65%; /* Center vertically */
+    left: 71.8%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Move back by half of its own width and height */
+    background: transparent;
+    width: 200px;
+    z-index: 1; /* Ensure it's above other content */
+}
+
+.menu {
+    font-family: 'Poppins';
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: #9fa5b5;
+    width: 230px;
+    max-height: 300px; /* Set maximum height for scrollable content */
+    overflow-y: auto; /* Enable vertical scrolling */
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.menu::-webkit-scrollbar {
+    width: 0.5vw;
+}
+.menu::-webkit-scrollbar-thumb {
+    background-color: #ea1538;
+    border-radius: 50px;
+}
+.menu::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.menu li {
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background: #2a2d35;
+}
+
+.list-item-active {
+    background: #23242a;
+}
+
+.menu-open{
+    display: block;
+    opacity: 1;
+}
+
+#search-button2 {
+    background-color: #ea1538;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: auto; /* Push the button to the right */
+    transition: 0.5s;
+    margin-left: 10px;
+}
+#search-button2:hover {
+    background-color: #ba112d;
+}
+
+/* BUS SECTION */
+.bus-container {
+    font-family: 'Poppins';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    height: 120px;
+    border-radius: 20px;
+    background: #fff;
+    margin: auto;
+}
+
+#wherefrombus {
+    margin-left: 20px;
+}
+
+.line3 {
+    height: 50px;
+    width: 4px;
+    border-radius: 4px;
+    background: rgb(190, 189, 189);
+    z-index: 1111;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#search-button4 {
+    background-color: #ea1538;
+    color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: auto; /* Push the button to the right */
+    transition: 0.5s;
+    margin-left: 10px;
+    width: 150px;
+}
+#search-button4:hover {
+    background-color: #ba112d;
+}
+
+/* cabs section */
+
+.cabs-top-container {
+    font-family: 'Poppins';
+    display: flex;
+    min-height: 18vh;
+    justify-content: centre;
+    align-items: center;
+    background: #1c2841;
+    border-radius: 20px;
+    max-width: 78%;
+    margin: auto;
+}
+
+.cabs-container{
+    width: 350px;
+}
+
+.entryarea {
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+    margin-left: 30px;
+}
+
+.entryarea input {
+    position: absolute;
+    width: 100%;
+    outline: none;
+    font-size: 1.2em;
+    padding: 0 20px;
+    line-height: 80px;
+    border-radius: 10px;
+    border: 2px solid#f0ffff;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1111;
+}
+.labelline {
+    position: absolute;
+    font-size: 1.2em;
+    color: #f0ffff;
+    padding: 0 25px;
+    margin: 0 20px;
+    background-color: #1c2841;
+    transition: 0.2s ease;
+}
+.entryarea input:focus,
+.entryarea input:valid{
+    color: #66ff00;
+    border: 4px solid #66ff00;
+}
+.entryarea input:focus + .labelline,
+input:valid + .labelline {
+    color: #66ff00;
+    height: 30px;
+    line-height: 30px;
+    transform: translate(-15px,-16px) scale(0.88);
+    z-index: 1111;
+}
+
+.location-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    color: #f0f0f0;
+    margin-top: 3px;
+    margin-left: -45px;
+    margin-right: 20px;
+    cursor: pointer;
+    z-index: 1111;
+    transition: 0.2s;
+}
+
+.location-button:hover {
+    transform: scale(1.3);
+    color: #66ff00;
+}
+
+.circle1 {
+    border: 3px solid #f0f0f0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #1c2841;
+    margin-left: -8px;
+    z-index: 1111;
+}
+.line {
+    width: 60px;
+    height: 3px;
+    background: #f0f0f0;
+}
+.circle2 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #66ff00;
+    margin-left: -6px;
+    z-index: 1111;
+}
+#cab-destination {
+    z-index: 0;
+    margin-left: -9px;
+}
+
+.line2 {
+    height: 50px;
+    width: 4px;
+    border-radius: 4px;
+    background: #101624;
+    z-index: 1111;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#search-button3 {
+    background-color: #c3ff00;
+    font-style: italic;
+    font-size: 20px;
+    color: #1c2841;
+    border: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 300px;
+    cursor: pointer;
+    margin-right: left; /* Push the button to the right */
+    transition: 0.5s;
+
+}
+#search-button3:hover {
+    background-color: #aee203;
+}
+
+/* bikes section */
+
+.bikes-top-container {
+    font-family: 'Poppins';
+    display: flex;
+    min-height: 18vh;
+    justify-content: centre;
+    align-items: center;
+    background: #1c2841;
+    border-radius: 20px;
+    max-width: 78%;
+    margin: auto;
+}
+
+.bikes-container{
+    width: 350px;
+}
+
+.entryarea {
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+    margin-left: 30px;
+}
+
+.entryarea input {
+    position: absolute;
+    width: 100%;
+    outline: none;
+    font-size: 1.2em;
+    padding: 0 20px;
+    line-height: 80px;
+    border-radius: 10px;
+    border: 2px solid#f0ffff;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1111;
+}
+.labelline {
+    position: absolute;
+    font-size: 1.2em;
+    color: #f0ffff;
+    padding: 0 25px;
+    margin: 0 20px;
+    background-color: #1c2841;
+    transition: 0.2s ease;
+}
+.entryarea input:focus,
+.entryarea input:valid{
+    color: #66ff00;
+    border: 4px solid #66ff00;
+}
+.entryarea input:focus + .labelline,
+input:valid + .labelline {
+    color: #66ff00;
+    height: 30px;
+    line-height: 30px;
+    transform: translate(-15px,-16px) scale(0.88);
+    z-index: 1111;
+}
+
+#location-button {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    color: #f0f0f0;
+    margin-top: 3px;
+    margin-left: -45px;
+    margin-right: 20px;
+    cursor: pointer;
+    z-index: 1111;
+    transition: 0.2s;
+}
+
+#location-button:hover {
+    transform: scale(1.3);
+    color: #66ff00;
+}
+
+.circle1 {
+    border: 3px solid #f0f0f0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #1c2841;
+    margin-left: -8px;
+    z-index: 1111;
+}
+.line {
+    width: 60px;
+    height: 3px;
+    background: #f0f0f0;
+}
+.circle2 {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #66ff00;
+    margin-left: -6px;
+    z-index: 1111;
+}
+#bike-destination {
+    z-index: 0;
+    margin-left: -9px;
+}
+
+.line2 {
+    height: 50px;
+    width: 4px;
+    border-radius: 4px;
+    background: #101624;
+    z-index: 1111;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#search-button3 {
+    background-color: #c3ff00;
+    font-style: italic;
+    font-size: 20px;
+    color: #1c2841;
+    border: none;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 300px;
+    cursor: pointer;
+    margin-right: left; /* Push the button to the right */
+    transition: 0.5s;
+
+}
+#search-button3:hover {
+    background-color: #aee203;
+}
+
+
+.service {
+    display: none;
+    animation: moving .2s ease;
+}
+
+@keyframes moving {
+    from{transform: translateX(0px);opacity:0;}
+    to{transform: translateX(0px);opacity: 1;}
+}
+
+.service.active {
+    display: block;
+}
+
+
+
+.flight-search-results {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    width: 80%;
+    position: absolute;
+    margin: auto;
+    top: 70%;
+    left: 10%;
+    border-radius: 20px;
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 0.2s ease-in-out;
+}
+.flight-search-results.active{
+    opacity: 1;
+    display: flex; /* Show when active */
+}
+
+
+
+.flight-search-results a{
+    padding: 5px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-inline: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+#ct-link svg{
+    padding-left: 30px;
+    padding-right: 30px;
+    scale: 2;
+}
+
+#go-link img{
+    width: 150px;
+}
+
+.flight-search-results a:hover{
+    transform: scale(1.2);
+}
+
+.ico-newHeaderLogo {
+    height: 39px;
+    width: 110px;
+    display: inline-block;
+    background: url(//www.yatra.com/fresco/resources/beetle/images/newIcons/yatra_logo.svg) center no-repeat;
+    background-size: 110px 39.5px;
+}
