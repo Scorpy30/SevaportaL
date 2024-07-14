@@ -31,3 +31,6 @@ We also have further plan to develop an dedicated app that will ease the flow of
 
 
 We THANK YOU for your support and patience!!!!
+
+
+*Assets are being taken from Google, we have no right on them.
